@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- remaxicon -->
+    <link rel="stylesheet" href="assets/remaxicon/remixicon.css">
+    <!-- maps -->
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/styel.css">
+    <!-- mediaquery{always put css file bottom} -->
+    <link rel="stylesheet" href="assets/css/mediaquery.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class=" d-flex space-between aling-center">
+        <div class="search d-flex aling-center">
+            <i class=" bar ri-menu-2-fill"></i>
+            <div class="search-icone">
+                <input type="text" placeholder="search">
+                <i class="ri-search-line"></i>
+            </div>
+        </div>
+        <div class="icone d-flex aling-center">
+            <img src="assets/images/us.svg " class="flag" alt="">
+            <i class="ri-function-line "></i>
+            <i class="ri-shopping-bag-line"></i>
+            <i class="ri-fullscreen-line " onclick="toggleFullScreen(document.body)"></i>
+            <i class="ri-fullscreen-exit-line  d-none" onclick="toggleFullScreen(document.body)"></i>
+            <i class="ri-moon-line "></i>
+            <i class="ri-sun-line d-none"></i>
+            <i class="ri-notification-2-line"></i>
+            <span class=" founder d-flex aling-center">
+                <img src="assets/images/avatar-1.jpg" alt="">
+                <span class="text-center ">
+                    <h3>Anna Adame</h3>
+                    <span>Founder</span>
+                </span>
+            </span>
+            <img src="assets/images/avatar-1.jpg" alt="" class="d-none">
+        </div>
+    </header>
+    <aside>
+        <div class="logo-lg">
+            <img src="assets/images/logo.png" alt="">
+        </div>
+        <div class="logo-sm d-none">
+            <img src="assets/images/logo-sm.png" alt="">
+        </div>
+        <div class="sidbar">
+            <div class="menu">
+                <h3 class="menu-title"><span>Menu</span></h3>
+                <i class="ri-more-fill d-none"></i>
+                <!-- Dashboards start -->
+                <div class="nav-item Dashboards d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-compass-line nav-icone"></i>
+                        <span>Dashboards</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Analytics</li>
+                    <li><i class="ri-subtract-line"></i> CRM</li>
+                    <li><i class="ri-subtract-line"></i> Ecommerce</li>
+                    <li><i class="ri-subtract-line"></i> Crypto</li>
+                    <li><i class="ri-subtract-line"></i> Projects</li>
+                    <li><i class="ri-subtract-line"></i> NFT</li>
+                    <li><i class="ri-subtract-line"></i> Job</li>
+                </ul>
+                <!--  Dashboards end-->
+                <!-- Apps start -->
+                <div class="nav-item Apps d-flex aling-center  space-between">
+                    <div class="nav-link">
+                        <i class="ri-layout-grid-fill nav-icone"></i>
+                        <span>Apps</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Calendar</li>
+                    <li><i class="ri-subtract-line"></i> Chat</li>
+                    <li><i class="ri-subtract-line"></i> Email</li>
+                    <li><i class="ri-subtract-line"></i> Ecommerce</li>
+                    <li><i class="ri-subtract-line"></i> Projects</li>
+                    <li><i class="ri-subtract-line"></i> Tasks</li>
+                    <li><i class="ri-subtract-line"></i> CRM</li>
+                    <li><i class="ri-subtract-line"></i> Crypto</li>
+                    <li><i class="ri-subtract-line"></i> Invoices</li>
+                    <li><i class="ri-subtract-line"></i> Support Tickets</li>
+                    <li><i class="ri-subtract-line"></i> NFT Marketplace</li>
+                    <li><i class="ri-subtract-line"></i> File Manager</li>
+                    <li><i class="ri-subtract-line"></i> To DO</li>
+                    <li><i class="ri-subtract-line"></i> Jobs</li>
+                    <li><i class="ri-subtract-line"></i> API Key</li>
+                    <li><i class="ri-subtract-line"></i> File Manager</li>
+                </ul>
+                <!--  Apps end-->
+                <!-- Layouts start -->
+                <div class="nav-item Layouts d-flex aling-center space-between ">
+                    <div class="nav-link ">
+                        <i class="ri-layout-3-line nav-icone"></i>
+                        <span>Layouts</span>
+                    </div>
+                    <div>
+                        <h3 class=" nav-hot"> Hot</h3>
+
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+
+                </ul>
+                <!-- Layouts end -->
+            </div>
+            <div class="pages">
+                <h3 class="menu-title"><span>PAGES</span></h3>
+                <i class="ri-more-fill d-none"></i>
+                <!-- Authentication START -->
+                <div class="nav-item Authentication d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-account-circle-line nav-icone"></i>
+                        <span>Authentication</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!-- Authentication END -->
+                <!--  Pages START -->
+                <div class="nav-item Pages d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-pages-line nav-icone"></i>
+                        <span>Pages</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Pages END -->
+                <!--  Landing START -->
+                <div class="nav-item Landing d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-rocket-line nav-icone"></i>
+                        <span> Landing</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Landing END -->
+            </div>
+            <div class="Components">
+                <h3 class="menu-title"><span>Components</span></h3>
+                <i class="ri-more-fill d-none"></i>
+                <!-- Base UI START -->
+                <div class="nav-item Base-UI d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-account-circle-line nav-icone"></i>
+                        <span>Base UI</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!-- Base UI END -->
+                <!--  Advance UI START -->
+                <div class="nav-item Advance-UI d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-pages-line nav-icone"></i>
+                        <span>Advance UI</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Advance UI END -->
+                <!--  Widgets START -->
+                <div class="nav-item Widgets d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-rocket-line nav-icone"></i>
+                        <span> Widgets</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown  d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Widgets END -->
+                <!--  Forms START -->
+                <div class="nav-item Forms d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-survey-line nav-icone"></i>
+                        <span> Forms</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown   d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Form END -->
+                <!--  Tables START -->
+                <div class="nav-item Tables d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-table-line nav-icone"></i>
+                        <span> Tables</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown   d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Tables END -->
+                <!--  Charts START -->
+                <div class="nav-item Charts d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-pie-chart-line nav-icone"></i>
+                        <span> Charts</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown   d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Charts END -->
+                <!--  Icons START -->
+                <div class="nav-item Icons d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-compasses-2-fill nav-icone"></i>
+                        <span> Icons</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown   d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Icons END -->
+                <!--  Maps START -->
+                <div class="nav-item Maps d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-map-pin-line nav-icone"></i>
+                        <span> Maps</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown   d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Maps END -->
+                <!--  Multi Level START -->
+                <div class="nav-item Widgets d-flex aling-center space-between ">
+                    <div class="nav-link">
+                        <i class="ri-share-line nav-icone"></i>
+                        <span> Multi Level</span>
+                    </div>
+                    <div>
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </div>
+                </div>
+                <ul class="dropdown   d-none">
+                    <li><i class="ri-subtract-line"></i> Horizontal</li>
+                    <li><i class="ri-subtract-line"></i> Detached</li>
+                    <li><i class="ri-subtract-line"></i> Two text-centerumn</li>
+                    <li><i class="ri-subtract-line"></i> Hovered</li>
+                </ul>
+                <!--  Multi Level END -->
+            </div>
+        </div>
+    </aside>
+
+    <!-- founder-content start -->
+    <div class="founder-content ">
+        <div class="founder-menu">
+            <span>Welcome Anna!</span>
+        </div>
+        <div class="founder-menu">
+            <i class="ri-account-circle-fill"></i>
+            <span>Profile</span>
+        </div>
+        <div class="founder-menu">
+            <i class="ri-message-2-fill"></i>
+            <span>Massage</span>
+        </div>
+        <div class="founder-menu">
+            <i class="ri-task-fill"></i>
+            <span>Taskbord</span>
+        </div>
+        <div class="founder-menu mb-10">
+            <i class="ri-football-fill"></i>
+            <span>Help</span>
+        </div>
+        <hr>
+        <div class="founder-menu mt-10">
+            <i class="ri-wallet-fill"></i>
+            <span>Balance: <b> $5971.67</b></span>
+        </div>
+        <div class="founder-menu">
+            <i class="ri-settings-3-fill"></i>
+            <span>Settings</span>
+        </div>
+        <div class="founder-menu">
+            <i class="ri-lock-2-fill"></i>
+            <span>Lock screen</span>
+        </div>
+        <div class="founder-menu">
+            <i class="ri-logout-box-fill"></i>
+            <a href="login.html" style="color: var(--black);"> <span> Logout</span>
+        </div>
+    </div>
+
+    <!-- category start -->
+    <div class="category">
+        <div class="category-title">
+            <div class="d-flex space-between aling-center">
+                <div>
+                    <h6> Web Apps </h6>
+                </div>
+                <div>
+                    <a href="#" class="btn View-All-Apps "> View All Apps
+                        <i class="ri-arrow-right-s-line "></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-info">
+            <div class="d-flex space-between mb-20 aling-center">
+                <div class="text-center category-box">
+                    <a class="webapps-icon-item" href="">
+                        <img src="assets/images/github.png">
+                        <h4>GitHub</h4>
+                    </a>
+                </div>
+                <div class="text-center category-box">
+                    <a class="webapps-icon-item" href="">
+                        <img src="assets/images/bitbucket.png">
+                        <h4>Bitbucket</h4>
+                    </a>
+                </div>
+                <div class="text-center category-box">
+                    <a class="webapps-icon-item" href="">
+                        <img src="assets/images/dribbble.png">
+                        <h4>Dribbble</h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="d-flex space-between mb-20 aling-center">
+                <div class=" text-center category-box">
+                    <a class="webapps-icon-item" href="">
+                        <img src="assets/images/dropbox.png">
+                        <h4>Dropbox</h4>
+                    </a>
+                </div>
+                <div class="text-center category-box">
+                    <a class="webapps-icon-item" href="">
+                        <img src="assets/images/mail_chimp.png">
+                        <h4>Mail Chimp</h4>
+                    </a>
+                </div>
+                <div class="text-center category-box">
+                    <a class="webapps-icon-item" href="">
+                        <img src="assets/images/slack.png">
+                        <h4>Slack</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- languages start -->
+    <div class="languages ">
+        <div class="mb-10 country country">
+            <img src="assets/images/flag-1.svg" alt="">
+            <span>English</span>
+
+        </div>
+        <div class="mb-10 country">
+            <img src="assets/images/flag-2.svg" alt="">
+            <span>Española</span>
+        </div>
+        <div class="mb-10 country">
+            <img src="assets/images/flag-3.svg" alt="">
+            <span>Deutsche</span>
+        </div>
+        <div class="mb-10 country">
+            <img src="assets/images/flag-4.svg" alt="">
+            <span>Italiana</span>
+        </div>
+        <div class="mb-10 country">
+            <img src="assets/images/flag-5.svg" alt="">
+            <span>русский</span>
+        </div>
+        <div class="mb-10 country">
+            <img src="assets/images/flag-6.svg" alt="">
+            <span>中国人</span>
+        </div>
+        <div class="mb-10 country">
+            <img src="assets/images/flag-7.svg" alt="">
+            <span>français</span>
+        </div>
+        <div class="mb-10 country">
+            <img src="assets/images/flag-8.svg" alt="">
+            <span>Arabic</span>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="first-line d-flex space-between">
+            <div class="massage">
+                <h3>Good Morning, Anna!</h3>
+                <p>Here's what's happening with your store today.</p>
+            </div>
+            <div class="date d-flex align-center ">
+                <!-- <div ><input type="text" name="date" id="date" ></div> -->
+                <div class="btn mr-10">
+                    <i class="ri-add-circle-line  mr-10"></i> <span > Add Product</span>
+                </div>
+                <i class="ri-pulse-line btn  mr-10"></i>
+            </div>
+        </div>
+        <div class="main-page">
+            <div class="card card-1">
+                <div class="d-flex align-center space-between mb-20">
+                    <p> Total Earnings</p>
+                    <h5>
+                        <i class="ri-arrow-right-up-line"></i> +16.24 %
+                    </h5>
+                </div>
+                <div class="d-flex space-between  ">
+                    <div>
+                        <h4 class="mb-10 ">$<span class="count">559.25</span>k</h4>
+                        <a href="" onclick="return false" >View net earnings</a>
+                    </div>
+                    <div class="i-design">
+                        <i class="ri-money-dollar-circle-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-2">
+                <div class="d-flex aling-center  space-between mb-20">
+                    <p> ORDERS</p>
+                    <h5>
+                        <i class="ri-arrow-right-down-line"></i>
+                        -3.57 %
+                    </h5>
+                </div>
+                <div class="d-flex space-between  ">
+                    <div>
+                        <h4 class="mb-10 count">3689</h4>
+                        <a href="" onclick="return false">View all orders</a>
+                    </div>
+                    <div class="i-design">
+                        <i class="ri-shopping-bag-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-3">
+                <div class="d-flex align-center space-between mb-20">
+                    <p> CUSTOMERS</p>
+                    <h5><i class="ri-arrow-right-up-line"></i>+29.08 %</h5>
+                </div>
+                <div class="d-flex space-between  ">
+                    <div>
+                        <h4 class="mb-10"><span class="count">183.35</span>M</h4>
+                        <a href="" onclick="return false">See details</a>
+                    </div>
+                    <div class="i-design">
+                        <i class="ri-account-circle-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-4">
+                <div class="d-flex align-center space-between mb-20">
+                    <p> Total Earnings</p>
+                    <h5><i class="ri-arrow-right-up-line"></i> +16.24 %</h5>
+                </div>
+                <div class="d-flex space-between  ">
+                    <div>
+                        <h4 class="mb-10">$<span class="count">559.25</span>k</h4>
+                        <a href="" onclick="return false">Withdraw money</a>
+                    </div>
+                    <div class="i-design">
+                        <i class="ri-wallet-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="Revenue-box">
+                <div class="card-header align-center d-flex space-between">
+                    <h2 class="card-title">Revenue</h2>
+                    <div class="Revenue-btn d-flex mr-10">
+                        <h5 class="btn  mr-10">ALL</h5>
+                        <h5 class="btn mr-10">1M</h5>
+                        <h5 class="btn mr-10">6M</h5>
+                        <h5 class="btn">1Y</h5>
+                    </div>
+                </div>
+                <div class="card-body text-center d-flex">
+                    <div class="card-body1">
+                        <h5 class="mb-10 mt-10">7,585</h5>
+                        <p>Orders</p>
+                    </div>
+                    <div class="card-body2">
+                        <h5 class="mb-10 mt-10">$22.89k</h5>
+                        <p>Earnings</p>
+                    </div>
+                    <div class="card-body3">
+                        <h5 class="mb-10 mt-10">367</h5>
+                        <p>Refunds</p>
+                    </div>
+                    <div class="card-body4">
+                        <h5 class="mb-10 mt-10">18.92%</h5>
+                        <p>Conversation Ratio</p>
+                    </div>
+                </div>
+                <div class="Revenue"></div>
+            </div>
+            <div class="map-box">
+                <div class="p-title align-center d-flex space-between">
+                    <h4>Sales by Locations</h4>
+                    <div class=" ">
+                        <div>
+                            <span class="btn">Export Report</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+            <div class="Best-Selling-Products">
+                <div class="p-title align-center d-flex space-between">
+                    <h4>Best Selling Products</h4>
+                    <div>
+                        <span class="sbt1 sbt">Sort by Today <i class="ri-arrow-down-s-line nav-arrow"></i></span>
+                    </div>
+                    <div class=" drop drop1 d-none ">
+                        <h4>Today</h4>
+                        <h4>Yesterday</h4>
+                        <h4>Last 7 Days</h4>
+                        <h4>Last 30 Days</h4>
+                        <h4>This Month</h4>
+                        <h4>Last Month</h4>
+                    </div>
+                </div>
+                <div class="p-box ">
+                    <div class="p-content">
+                        <table width="100%" cellspacing="20">
+                            <tbody>
+                                <tr class="line">
+                                    <td class="d-flex align-center">
+                                        <img src="assets/images/img-1.png" alt="">
+                                        <div>
+                                            <h5>Branded T-Shirts</h5>
+                                            <span>24 Apr 2021</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>$29.00</h5>
+                                        <span>Price</span>
+                                    </td>
+                                    <td>
+                                        <h5>62</h5>
+                                        <span>Orders</span>
+                                    </td>
+                                    <td>
+                                        <h5>510</h5>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td>
+                                        <h5>$1,798</h5>
+                                        <span>Amount</span>
+                                    </td>
+                                </tr>
+                                <tr class="line">
+                                    <td class="d-flex align-center">
+                                        <img src="assets/images/img-2.png" alt="">
+                                        <div>
+                                            <h5>Bentwood Chair</h5>
+                                            <span>19 Mar 2021</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>$85.20</h5>
+                                        <span>Price</span>
+                                    </td>
+                                    <td>
+                                        <h5>35</h5>
+                                        <span>Orders</span>
+                                    </td>
+                                    <td>
+                                        <h4 class="btn-stock">Out of stock</h4>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td>
+                                        <h5>$2982</h5>
+                                        <span>Amount</span>
+                                    </td>
+                                </tr>
+                                <tr class="line">
+                                    <td class="d-flex align-center">
+                                        <img src="assets/images/img-3.png" alt="">
+                                        <div>
+                                            <h5>Borosil Paper Cup</h5>
+                                            <span>01 Mar 2021</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>$14.00</h5>
+                                        <span>Price</span>
+                                    </td>
+                                    <td>
+                                        <h5>80</h5>
+                                        <span>Orders</span>
+                                    </td>
+                                    <td>
+                                        <h5>749</h5>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td>
+                                        <h5>$1120</h5>
+                                        <span>Amount</span>
+                                    </td>
+                                </tr>
+                                <tr class="line">
+                                    <td class="d-flex align-center">
+                                        <img src="assets/images/img-4.png" alt="">
+                                        <div>
+                                            <h5>One Seater Sofa</h5>
+                                            <span>11 Feb 2021</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>$127.50</h5>
+                                        <span>Price</span>
+                                    </td>
+                                    <td>
+                                        <h5>56</h5>
+                                        <span>Orders</span>
+                                    </td>
+                                    <td>
+                                        <h4 class="btn-stock">Out of stock</h4>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td>
+                                        <h5>$7140</h5>
+                                        <span>Amount</span>
+                                    </td>
+                                </tr>
+                                <tr class="line">
+                                    <td class="d-flex align-center">
+                                        <img src="assets/images/img-5.png" alt="">
+                                        <div>
+                                            <h5>Stillbird Helmet</h5>
+                                            <span>17 Jan 2021</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>$54</h5>
+                                        <span>Price</span>
+                                    </td>
+                                    <td>
+                                        <h5>74</h5>
+                                        <span>Orders</span>
+                                    </td>
+                                    <td>
+                                        <h5>805</h5>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td>
+                                        <h5>$3996</h5>
+                                        <span>Amount</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="p-title align-center d-flex space-between btn-outline-box">
+                    <h4>Showing 5 of 25 Results</h4>
+                    <div class="btn-outline-box">
+                        <i class="ri-arrow-left-line btn-outline"></i>
+                        <span class="btn-outline ">1</span>
+                        <span class=" btn-outline btn-outline-active">2</span>
+                        <span class="btn-outline">3</span>
+                        <i class="ri-arrow-right-line btn-outline"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="Top-Sellers">
+                <div class="p-title align-center d-flex space-between">
+                    <h4>Top Sellers</h4>
+                    <div>
+                        <span class="sbt2 sbt">Report<i class="ri-arrow-down-s-line nav-arrow"></i></span>
+                    </div>
+                    <div class=" drop drop2 d-none ">
+                        <h4>Download Report</h4>
+                        <h4>Export</h4>
+                        <h4>Import</h4>
+                    </div>
+                </div>
+
+                <div class="p-box">
+                    <div class="p-content">
+                        <table width="100%" cellspacing="20">
+                            <tbody>
+                                <tr class="line">
+                                    <td>
+                                        <div class="d-flex align-center">
+                                            <img src="assets/images/img-1 (1).png" alt="">
+                                            <div>
+                                                <h5> iTest Factory</h5>
+                                                <span>Oliver Tyler</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Bags and Wallets</h5>
+                                    </td>
+                                    <td>
+                                        <h5>$541200</h5>
+                                    </td>
+                                    <td>
+                                        <h5> 8547</h5>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td class="d-flex">
+                                        <h5>32%</h5>
+                                        <i class="ri-bar-chart-fill"></i>
+                                    </td>
+                                </tr>
+                                <tr class="line">
+                                    <td>
+                                        <div class="d-flex align-center">
+                                            <img src="assets/images/img-2 (1).png" alt="">
+                                            <div>
+                                                <h5>Digitech Galaxy</h5>
+                                                <span>John Roberts</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Watches</h5>
+                                    </td>
+                                    <td>
+                                        <h5>$75030</h5>
+                                    </td>
+                                    <td>
+                                        <h5>895</h5>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td class=" d-flex">
+                                        <h5>79%</h5>
+                                        <i class="ri-bar-chart-fill"></i>
+                                    </td>
+                                </tr>
+                                <tr class="line">
+                                    <td>
+                                        <div class="d-flex align-center">
+                                            <img src="assets/images/img-3 (1).png" alt="">
+                                            <div>
+                                                <h5> Nesta Technologies</h5>
+                                                <span>Harley Fuller</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Bike Accessories</h5>
+                                    </td>
+                                    <td>
+                                        <h5>$45600</h5>
+                                    </td>
+                                    <td>
+                                        <h5> 3470</h5>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td class=" d-flex">
+                                        <h5>90%</h5>
+                                        <i class="ri-bar-chart-fill"></i>
+                                    </td>
+                                </tr>
+                                <tr class="line">
+                                    <td>
+                                        <div class="d-flex align-center">
+                                            <img src="assets/images/img-4.png" alt="">
+                                            <div>
+                                                <h5> Zoetic Fashion</h5>
+                                                <span>James Bowen</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Clothes</h5>
+                                    </td>
+                                    <td>
+                                        <h5>$29456</h5>
+                                    </td>
+                                    <td>
+                                        <h5> 5488</h5>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td class=" d-flex">
+                                        <h5>40%</h5>
+                                        <i class="ri-bar-chart-fill"></i>
+                                    </td>
+                                </tr>
+                                <tr class="line">
+                                    <td>
+                                        <div class="d-flex align-center">
+                                            <img src="assets/images/img-5 (1).png" alt="">
+                                            <div>
+                                                <h5> Meta4Systems</h5>
+                                                <span>Zoe Dennis</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Furniture</h5>
+                                    </td>
+                                    <td>
+                                        <h5> $11260</h5>
+                                    </td>
+                                    <td>
+                                        <h5>4100</h5>
+                                        <span>Stock</span>
+                                    </td>
+                                    <td class=" d-flex">
+                                        <h5>57%</h5>
+                                        <i class="ri-bar-chart-fill"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="p-title align-center d-flex space-between btn-outline-box">
+                        <h4>Showing 5 of 25 Results</h4>
+                        <div class="btn-outline-box">
+                            <i class="ri-arrow-left-line btn-outline"></i>
+                            <span class="btn-outline">1</span>
+                            <span class=" btn-outline btn-outline-active">2</span>
+                            <span class="btn-outline">3</span>
+                            <i class="ri-arrow-right-line btn-outline"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="source-box">
+                <div class="p-title align-center d-flex space-between">
+                    <h4>Store Visits by Source</h4>
+                    <div>
+                        <span class="sbt3 sbt">Report<i class="ri-arrow-down-s-line nav-arrow"></i></span>
+                    </div>
+                    <div class="drop drop3 d-none ">
+                        <h4>Download Report</h4>
+                        <h4>Export</h4>
+                        <h4>Import</h4>
+                    </div>
+                </div>
+                <div class="source"></div>
+            </div>
+            <div class="Orders-box text-center ">
+                <div class="p-title align-center d-flex space-between">
+                    <h4>Recent Orders</h4>
+                    <div class="btn ">Generate Report</div>
+                </div>
+                <table cellspacing="7" width="100%">
+                    <thead>
+                        <tr>
+                            <th> Order</th>
+                            <th> Custom </th>
+                            <th> Produc </th>
+                            <th> Amount </th>
+                            <th> Vendor </th>
+                            <th> Status </th>
+                            <th> Rating </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h5>#VZ2112</h5>
+                            </td>
+                            <td class=" d-flex justify-center">
+                                <img src="assets/images/avatar-1.jpg" alt="">
+                                <h5 class="mt-20"> Alex Smith</h5>
+                            </td>
+                            <td>
+                                <h5>Clothes</h5>
+                            </td>
+                            <td>
+                                <h5> $109.00</h5>
+                            </td>
+                            <td>
+                                <h5> Zoetic Fashion</h5>
+                            </td>
+                            <td>
+                                <h4 class="btn-paid">Paid</h4>
+                            </td>
+                            <td>
+                                <h5>5.0(61 votes)</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>#VZ2112</h5>
+                            </td>
+                            <td class=" d-flex  justify-center">
+                                <img src="assets/images/avatar-2.jpg" alt="">
+                                <h5 class="mt-20"> Alex Smith</h5>
+                            </td>
+                            <td>
+                                <h5>Clothes</h5>
+                            </td>
+                            <td>
+                                <h5> $109.00</h5>
+                            </td>
+                            <td>
+                                <h5> Zoetic Fashion</h5>
+                            </td>
+                            <td>
+                                <h4 class="btn-pending">Panding</h4>
+                            </td>
+                            <td>
+                                <h5>5.0(61 votes)</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>#VZ2112</h5>
+                            </td>
+                            <td class=" d-flex justify-center">
+                                <img src="assets/images/avatar-3.jpg" alt="">
+                                <h5 class="mt-20"> Alex Smith</h5>
+                            </td>
+                            <td>
+                                <h5>Clothes</h5>
+                            </td>
+                            <td>
+                                <h5> $109.00</h5>
+                            </td>
+                            <td>
+                                <h5> Zoetic Fashion</h5>
+                            </td>
+                            <td>
+                                <h4 class="btn-paid">Paid</h4>
+                            </td>
+                            <td>
+                                <h5>5.0(61 votes)</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>#VZ2112</h5>
+                            </td>
+                            <td class=" d-flex a  justify-center">
+                                <img src="assets/images/avatar-4.jpg" alt="">
+                                <h5 class="mt-20"> Alex Smith</h5>
+                            </td>
+                            <td>
+                                <h5>Clothes</h5>
+                            </td>
+                            <td>
+                                <h5> $109.00</h5>
+                            </td>
+                            <td>
+                                <h5> Zoetic Fashion</h5>
+                            </td>
+                            <td>
+                                <h4 class="btn-pending">Paid</h4>
+                            </td>
+                            <td>
+                                <h5>5.0(61 votes)</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>#VZ2112</h5>
+                            </td>
+                            <td class=" d-flex align-center  justify-center">
+                                <img src="assets/images/avatar-5.jpg" alt="">
+                                <h5> Alex Smith</h5>
+                            </td>
+                            <td>
+                                <h5>Clothes</h5>
+                            </td>
+                            <td>
+                                <h5> $109.00</h5>
+                            </td>
+                            <td>
+                                <h5> Zoetic Fashion</h5>
+                            </td>
+                            <td>
+                                <h4 class="btn-paid">Paid</h4>
+                            </td>
+                            <td>
+                                <h5>5.0(61 votes)</h5>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!-- setting start -->
+    <div class="settings">
+        <div class="setting-icon">
+            <i class="ri-settings-3-line"></i>
+        </div>
+    </div>
+    <div class="setting-menu d-none">
+        <div class="blue theam"></div>
+        <div class="red theam"></div>
+        <div class="black theam"></div>
+        <div class="orange theam"></div>
+        <div class="white theam"></div>
+    </div>
+    <!-- back to top start -->
+    <button class="top"><i class="ri-arrow-up-line"></i></button>
+    <!-- SCRIPT START-->
+    <!-- jquery FILE -->
+    <script src="assets/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <!-- jquery ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <!-- counter -->
+    <script src="assets/js/counter.js"></script>
+    <!-- chart CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- always put bottom of chart cdn or file -->
+    <script src="assets/js/chart.js"></script>
+    <!-- map -->
+    <script src="assets/js/map.js"></script>
+    <!-- fullscreen -->
+    <script src="assets/js/fullscreen.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
